@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanka Corporation</title>
+    <meta name="description" content="Hanka Precision Instruments is a major manufacturer of AI robots. We manufacture a variety of different models from defense to waitpersons." />
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="brand-logo glowing-logo">Hanka Corporation</a>
+            <ul class="navbar-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/sobrenosotros.html">Sobre nosotros</a></li>
+                <li><a href="/productos.html">Productos</a></li>
+                <li><a href="/formulario.html">Contactanos</a></li>
+                <li><a href="/login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="containerC">
+        <div id="current-time" class="time"></div>
+        <div id="current-date" class="date"></div>
+    </div>
+
+    <div class="container">
+        <h1 id="typewriter-h1">Bienvenido a Hanka, Instrumentos de precisión</h1>
+        <p id="typewriter-p">"Los robots no pueden soñar, eso es lo que nos hace humanos." -Isaac Asimov-</p>
+        <div class="botones">
+            <!-- <a href="/login.html" class="cta-button">Login</a> -->
+            <!-- <a href="formulario.html" class="cta-button">Pulsa para el formulario!</a> -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>2024 Hanka Instrumentos de precisión. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="https://about.irobot.com/es-es/legal/privacy-principles">Privacidad</a>
+                <a href="https://es.wikipedia.org/wiki/Tres_leyes_de_la_rob%C3%B3tica">Terminos de servicio</a>
+                <a href="/formulario.html">Contactanos!</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateTimeAndDate() {
+    const now = new Date();
+
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const formattedTime = `${hours}:${minutes}:${seconds}`;
+
+    const days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+    const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    const dayName = days[now.getDay()];
+    const monthName = months[now.getMonth()];
+    const day = now.getDate();
+    const year = now.getFullYear();
+    const formattedDate = `${dayName}, ${monthName} ${day}, ${year}`;
+
+    document.getElementById('current-time').textContent = formattedTime;
+    document.getElementById('current-date').textContent = formattedDate;
+}
+
+setInterval(updateTimeAndDate, 1000);
+updateTimeAndDate();
+    </script>
+</body>
+
+
+</html>

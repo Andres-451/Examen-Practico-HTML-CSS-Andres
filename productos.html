@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="brand-logo glowing-logo">Hanka Corporation</a>
+            <ul class="navbar-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/sobrenosotros.html">Sobre nosotros</a></li>
+                <li><a href="/productos.html">Productos</a></li>
+                <li><a href="/formulario.html">Contactanos</a></li>
+                <li><a href="/login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="grid-container">
+
+        <div class="product">
+            <img src="/pictures/robot9.jpg" alt="Product 1" data-hover-src="/pictures/robot12.jpg">
+            <div class="description">
+                <h2>Modelos 1 y 1.2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Earum vel est totam
+                    fugiat nobis, sunt odit placeat dolor impedit
+                    officiis perspiciatis adipisci corrupti atque,
+                    optio ipsam numquam expedita sed. Corporis!
+                </p>
+
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="/pictures/robot1.jpg" alt="Product 2" data-hover-src="/pictures/robot20.jpg">
+            <div class="description">
+                <h2>Modelos 2 y 2.2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Earum vel est totam
+                    fugiat nobis, sunt odit placeat dolor impedit
+                    officiis perspiciatis adipisci corrupti atque,
+                    optio ipsam numquam expedita sed. Corporis!
+                </p>
+
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="/pictures/robot2.jpg" alt="Product 3" data-hover-src="/pictures/robot19.jpg">
+            <div class="description">
+                <h2>Modelos 3 y 3.2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Earum vel est totam
+                    fugiat nobis, sunt odit placeat dolor impedit
+                    officiis perspiciatis adipisci corrupti atque,
+                    optio ipsam numquam expedita sed. Corporis!
+                </p>
+
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="/pictures/robot3.jpg" alt="Product 4" data-hover-src="/pictures/robot18.jpg">
+            <div class="description">
+                <h2>Modelos 4 y 4.2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Earum vel est totam
+                    fugiat nobis, sunt odit placeat dolor impedit
+                    officiis perspiciatis adipisci corrupti atque,
+                    optio ipsam numquam expedita sed. Corporis!
+                </p>
+
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="/pictures/robot4.jpg" alt="Product 5" data-hover-src="/pictures/robot17.jpg">
+            <div class="description">
+                <h2>Modelos 5 y 5.2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Earum vel est totam
+                    fugiat nobis, sunt odit placeat dolor impedit
+                    officiis perspiciatis adipisci corrupti atque,
+                    optio ipsam numquam expedita sed. Corporis!
+                </p>
+
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="/pictures/robot5.jpg" alt="Product 6" data-hover-src="/pictures/robot16.jpg">
+            <div class="description">
+                <h2>Modelos 6 y 6.2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Earum vel est totam
+                    fugiat nobis, sunt odit placeat dolor impedit
+                    officiis perspiciatis adipisci corrupti atque,
+                    optio ipsam numquam expedita sed. Corporis!
+                </p>
+
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="/pictures/robot6.jpg" alt="Product 7" data-hover-src="/pictures/robot15.jpg">
+            <div class="description">
+                <h2>Modelos 7 y 7.2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Earum vel est totam
+                    fugiat nobis, sunt odit placeat dolor impedit
+                    officiis perspiciatis adipisci corrupti atque,
+                    optio ipsam numquam expedita sed. Corporis!
+                </p>
+
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="/pictures/robot7.jpg" alt="Product 8" data-hover-src="/pictures/robot14.jpg">
+            <div class="description">
+                <h2>Modelos 8 y 8.2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Earum vel est totam
+                    fugiat nobis, sunt odit placeat dolor impedit
+                    officiis perspiciatis adipisci corrupti atque,
+                    optio ipsam numquam expedita sed. Corporis!
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <a href="/index.html"><button>Volver a la pagina principal</button></a> -->
+    <footer>
+        <div class="footer-container">
+            <p>2024 Hanka Instrumentos de precisión. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="https://about.irobot.com/es-es/legal/privacy-principles">Privacidad</a>
+                <a href="https://es.wikipedia.org/wiki/Tres_leyes_de_la_rob%C3%B3tica">Terminos de servicio</a>
+                <a href="/formulario.html">Contactanos!</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const products = document.querySelectorAll('.product img');
+
+            products.forEach(product => {
+                const originalSrc = product.src;
+                const hoverSrc = product.getAttribute('data-hover-src');
+
+                product.addEventListener('mouseover', function () {
+                    product.src = hoverSrc;
+                });
+
+                product.addEventListener('mouseout', function () {
+                    product.src = originalSrc;
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

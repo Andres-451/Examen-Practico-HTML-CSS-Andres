@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="brand-logo glowing-logo">Hanka Corporation</a>
+            <ul class="navbar-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/sobrenosotros.html">Sobre nosotros</a></li>
+                <li><a href="/productos.html">Productos</a></li>
+                <li><a href="/formulario.html">Contactanos</a></li>
+                <li><a href="/login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="container2">
+        <form id="jsonForm" method="post">
+            <h2>Formulario</h2>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Coloca aquí tu nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Coloca aquí tu email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+            </div>
+            <div>
+                <input type="checkbox" id="scales" name="scales" required /> Acepta los términos generales
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submitBtn">Enviar</button>
+            </div>
+        </form>
+        <div id="mensajeExito" style="display:none;">Formulario enviado exitosamente</div>
+    </div>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <p>2024 Hanka Instrumentos de precisión. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="https://about.irobot.com/es-es/legal/privacy-principles">Privacidad</a>
+                <a href="https://es.wikipedia.org/wiki/Tres_leyes_de_la_rob%C3%B3tica">Terminos de servicio</a>
+                <a href="/formulario.html">Contactanos!</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const checkbox = document.getElementById('scales');
+            const submitButton = document.getElementById('submitBtn');
+
+            function toggleSubmitButton() {
+                submitButton.disabled = !checkbox.checked;
+            }
+            // para verificar el estado inicial del boton de envio (cuando cargo la pagina)
+            toggleSubmitButton();
+
+            // paracambiar el estado del botón de envío cuando el checkbox cambie
+            checkbox.addEventListener('change', toggleSubmitButton);
+        });
+    </script>
+</body>
+
+</html>
